@@ -26,14 +26,9 @@ public class Main  {
 
             long unique = cars.stream()
                     .filter(car -> car.getPrice() >= 700000 && car.getPrice() <= 800000)
-                    .map(Car::getModel)
+                    .map(Car::getNumber)
                     .distinct()
                     .count();
         System.out.println("Уникальные автомобили: " + unique);
-
-
-
-
         }
-
 }
